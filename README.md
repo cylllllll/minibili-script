@@ -46,13 +46,7 @@
 | **搜索页面** | `https://search.bilibili.com/all?keyword=...` | 打开 App 并搜索对应关键词 |
 
 
-## 📄 许可证 (License)
-
-本项目基于 [MIT License] 开源。
-
 ---
-
-
 
 **Disclaimer / 免责声明**:
 本项目与 Bilibili (哔哩哔哩) 官方及 MiniBili 无任何关联。脚本仅作为用户工具，用于提升个人浏览体验。使用本脚本所产生的任何后果由用户自行承担。
