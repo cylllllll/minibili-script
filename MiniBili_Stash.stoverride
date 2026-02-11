@@ -1,0 +1,22 @@
+name: "MiniBili 跳转"
+desc: "Bilibili 网页重定向至 MiniBili"
+author: "Minibili"
+
+url-rewrite:
+  # 1. BV号
+  - ^https?:\/\/(www\.|m\.)?bilibili\.com\/video\/(BV[A-Za-z0-9]+).* minibili://video/$2 302
+
+  # 2. av号
+  - ^https?:\/\/(www\.|m\.)?bilibili\.com\/video\/av([0-9]+).* minibili://video/av$2 302
+
+  # 3. 纯数字 aid
+  - ^https?:\/\/(www\.|m\.)?bilibili\.com\/video\/([0-9]+)\/?(\?.*)?$ minibili://video/$2 302
+
+  # 4. 搜索重定向
+  - ^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*keyword=([^&]+).* minibili://search?keyword=$2&type=$1 302
+
+mitm:
+  - "www.bilibili.com"
+  - "m.bilibili.com"
+  - "bilibili.com"
+  - "search.bilibili.com"

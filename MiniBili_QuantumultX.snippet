@@ -1,0 +1,21 @@
+hostname = www.bilibili.com, search.bilibili.com, m.bilibili.com, bilibili.com
+
+; ===== Minibili Video Redirect =====
+
+; 1. BV号 (匹配 BV 开头的字符串，忽略后面的参数)
+; 例如: https://www.bilibili.com/video/BV1c4411e77t/?spm_id_from=...
+^https?:\/\/(www\.|m\.)?bilibili\.com\/video\/(BV[A-Za-z0-9]+).* url 302 minibili://video/$2
+
+; 2. av号 (显式 av)
+; 例如: https://www.bilibili.com/video/av170001
+^https?:\/\/(www\.|m\.)?bilibili\.com\/video\/av([0-9]+).* url 302 minibili://video/av$2
+
+; 3. 纯数字 aid (虽然 B 站 Web 端很少直接用纯数字 url，但为了兼容写上)
+; 如果真的存在 /video/123 这种链接：
+^https?:\/\/(www\.|m\.)?bilibili\.com\/video\/([0-9]+)\/?(\?.*)?$ url 302 minibili://video/$2
+
+; ===== Minibili Search Redirect =====
+
+; 4. 重定向到 minibili://search?keyword=$2&type=$1 (注意：$2是关键词，$1是类型)
+
+^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*keyword=([^&]+).* url 302 minibili://search?keyword=$2&type=$1
