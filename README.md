@@ -19,11 +19,10 @@
 
 
 2. **支持的App**:
-* [Surge](surge:///install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcylllllll%2Fminibili-script%2Frefs%2Fheads%2Fmain%2FMiniBili.sgmodule) 
-* [Loon](loon://import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fcylllllll%2Fminibili-script%2Frefs%2Fheads%2Fmain%2FMiniBili.plugin
-) 
-* [Stash](stash://install-override?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcylllllll%2Fminibili-script%2Frefs%2Fheads%2Fmain%2FMiniBili.stoverride)
-* [Quantumult X](quantumult-x:///add-resource?remote-resource=%7B%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2Fcylllllll%2Fminibili-script%2Frefs%2Fheads%2Fmain%2FMiniBili.snippet%22%5D%7D%0A) 
+* [Surge](https://raw.githubusercontent.com/cylllllll/minibili-script/refs/heads/main/MiniBili.sgmodule) 
+* [Loon](https://raw.githubusercontent.com/cylllllll/minibili-script/refs/heads/main/MiniBili.plugin) 
+* [Stash](https://raw.githubusercontent.com/cylllllll/minibili-script/refs/heads/main/MiniBili.stoverride)
+* [Quantumult X](https://raw.githubusercontent.com/cylllllll/minibili-script/refs/heads/main/MiniBili.snippet) 
 
 
 ## 📖 使用说明
