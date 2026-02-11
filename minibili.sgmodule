@@ -1,0 +1,9 @@
+#!name=Bilibili Web to MiniBili
+#!desc=将 m.bilibili.com 的视频链接重定向至 MiniBili 客户端。必须解密 m.bilibili.com 才能匹配路径和执行重定向
+#!category=MiniBili
+
+[URL Rewrite]
+^https?:\/\/m\.bilibili\.com\/video\/(BV\w+) minibili://video/$1 307
+
+[MITM]
+hostname = %APPEND% m.bilibili.com
