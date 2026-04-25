@@ -3,7 +3,7 @@
 #!category=MiniBili
 
 [URL Rewrite]
-^https?:\/\/m\.bilibili\.com\/video\/([a-zA-Z0-9]+) minibili://video/$1 302
+^https?:\/\/(?:www|m)\.bilibili\.com\/video\/([a-zA-Z0-9]+) minibili://video/$1 302
 ^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*keyword=([^&]+).* minibili://search?keyword=$2&type=$1 302
 
 [MITM]
