@@ -1,9 +1,9 @@
-hostname = www.bilibili.com, search.bilibili.com, m.bilibili.com, bilibili.com
+#!name = Minibili Redirect
+#!author = Minibili
+#!update = 2026-4-25
 
-; ===== Minibili Redirect =====
-
-; 视频重定向 (一步到位合并支持 BV号、av号、纯数字aid)
 ^https?:\/\/(?:www\.|m\.)?bilibili\.com\/video\/(BV[a-zA-Z0-9]+|av\d+|\d+).* url 302 minibili://video/$1
 
-; 搜索重定向 (提取搜索类型与关键词，增加了 \b 边界匹配更精准)
 ^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*?\bkeyword=([^&]+).* url 302 minibili://search?keyword=$2&type=$1
+
+hostname = www.bilibili.com, search.bilibili.com, m.bilibili.com, bilibili.com
