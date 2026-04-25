@@ -1,14 +1,10 @@
 #!name=MiniBili 跳转
-#!desc=将 Bilibili 网页视频和搜索链接重定向到 MiniBili App 需要打开MITM
+#!desc=将 Bilibili 网页视频和搜索链接重定向到 MiniBili App 需要打开MITM。
 #!author=Minibili
-#!icon=https://raw.githubusercontent.com/bilibili/favicon.ico
 
 [Rewrite]
-# 合并 BV号、av号、纯数字 aid 的视频跳转
 ^https?:\/\/(?:www\.|m\.)?bilibili\.com\/video\/(BV[A-Za-z0-9]+|av[0-9]+|[0-9]+).* minibili://video/$1 302
-
-# 搜索重定向
 ^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*keyword=([^&]+).* minibili://search?keyword=$2&type=$1 302
 
 [MITM]
-hostname = www.bilibili.com, m.bilibili.com, bilibili.com, search.bilibili.com
+hostname = m.bilibili.com, bilibili.com, search.bilibili.com
