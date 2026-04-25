@@ -7,4 +7,4 @@
 ^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*keyword=([^&]+).* minibili://search?keyword=$2&type=$1 302
 
 [MITM]
-hostname = m.bilibili.com, bilibili.com, search.bilibili.com
+hostname = www.bilibili.com, m.bilibili.com, bilibili.com, search.bilibili.com
