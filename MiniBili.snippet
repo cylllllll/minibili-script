@@ -1,9 +1,6 @@
-#!name = Minibili Redirect
-#!author = Minibili
-#!update = 2026-4-25
-
-^https?:\/\/(?:www\.|m\.)?bilibili\.com\/video\/(BV[a-zA-Z0-9]+|av\d+|\d+).* url 302 minibili://video/$1
-
-^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*?\bkeyword=([^&]+).* url 302 minibili://search?keyword=$2&type=$1
-
+# Minibili Redirect
+# Author: Minibili
+# Update: 2026-04-25
 hostname = www.bilibili.com, search.bilibili.com, m.bilibili.com, bilibili.com
+^https?:\/\/(?:www\.|m\.)?bilibili\.com\/video\/(BV[a-zA-Z0-9]+|av\d+|\d+).* url 302 minibili://video/$1
+^https?:\/\/search\.bilibili\.com\/([a-zA-Z0-9_]+)\?.*?\bkeyword=([^&]+).* url 302 minibili://search?keyword=$2&type=$1
